@@ -1,0 +1,103 @@
+exception_handling.py
+"""
+=========================================================
+Project     : Python Fundamentals
+Module      : 15 - Exception Handling
+Author      : Kushendar
+Repository  : python-fundamentals
+Language    : Python 3
+
+Description
+-----------
+This module introduces Exception Handling in Python.
+
+Exception handling allows programs to detect and handle
+runtime errors gracefully without unexpectedly
+terminating the application.
+
+Python provides the try, except, else, and finally
+statements to manage exceptions and improve program
+stability.
+
+Learning Objectives
+-------------------
+1. Understand exceptions.
+2. Learn how to use try and except.
+3. Handle common runtime errors.
+4. Use else and finally blocks.
+5. Improve program reliability.
+6. Display informative error messages.
+
+Functions Used
+--------------
+print()         Display information.
+input()         Receive user input.
+float()         Convert user input.
+try             Detect runtime errors.
+except          Handle exceptions.
+else            Execute code if no exception occurs.
+finally         Execute cleanup code.
+
+Expected Output
+---------------
+The program safely divides two numbers while handling
+invalid input and division by zero using exception
+handling.
+
+Coding Style
+------------
+This module follows clean code principles and PEP 8
+recommendations for readability, maintainability,
+and professional software development.
+=========================================================
+"""
+
+
+def display_header():
+    """Display the program title."""
+
+    print("=" * 70)
+    print("Python Exception Handling")
+    print("=" * 70)
+
+
+def divide_numbers(number_a, number_b):
+    """Return the division result."""
+
+    return number_a / number_b
+
+
+def main():
+    """Main entry point of the program."""
+
+    display_header()
+
+    try:
+        number_a = float(input("Enter first number  : "))
+        number_b = float(input("Enter second number : "))
+
+        result = divide_numbers(number_a, number_b)
+
+    except ValueError:
+        print()
+        print("Error : Please enter a valid numeric value.")
+
+    except ZeroDivisionError:
+        print()
+        print("Error : Division by zero is not allowed.")
+
+    else:
+        print()
+        print("-" * 70)
+        print(f"Result : {result}")
+        print("-" * 70)
+
+    finally:
+        print()
+        print("=" * 70)
+        print("Program Completed")
+        print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()
