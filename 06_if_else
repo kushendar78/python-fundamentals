@@ -1,0 +1,111 @@
+if_else.py
+"""
+=========================================================
+Project     : Python Fundamentals
+Module      : 06 - If Else
+Author      : Kushendar
+Repository  : python-fundamentals
+Language    : Python 3
+
+Description
+-----------
+This module introduces conditional statements in Python.
+
+Conditional statements allow a program to make decisions
+based on specific conditions. Depending on whether a
+condition evaluates to True or False, the program can
+execute different blocks of code.
+
+Python provides the following conditional statements:
+
+1. if
+2. if...else
+3. if...elif...else
+
+Conditional statements are one of the most important
+concepts in programming because they enable programs to
+respond intelligently to different situations.
+
+Learning Objectives
+-------------------
+1. Understand Boolean expressions.
+2. Learn how to use the if statement.
+3. Learn how to use if...else.
+4. Learn how to use if...elif...else.
+5. Build decision-making logic.
+6. Display readable program output.
+
+Functions Used
+--------------
+input()     Receive user input.
+int()       Convert string to integer.
+print()     Display information.
+
+Expected Output
+---------------
+The program asks the user to enter an exam score and
+determines the corresponding grade based on predefined
+conditions.
+
+Coding Style
+------------
+This module follows clean code principles and PEP 8
+recommendations for readability, maintainability,
+and professional software development.
+=========================================================
+"""
+
+
+def main():
+    """Main entry point of the program."""
+
+    # =====================================================
+    # Receive User Input
+    # =====================================================
+
+    student_name = input("Enter student name : ")
+    exam_score = int(input("Enter exam score   : "))
+
+    # =====================================================
+    # Determine Grade
+    # =====================================================
+
+    if exam_score >= 90:
+        grade = "A"
+        description = "Excellent"
+
+    elif exam_score >= 80:
+        grade = "B"
+        description = "Very Good"
+
+    elif exam_score >= 70:
+        grade = "C"
+        description = "Good"
+
+    elif exam_score >= 60:
+        grade = "D"
+        description = "Needs Improvement"
+
+    else:
+        grade = "E"
+        description = "Failed"
+
+    # =====================================================
+    # Display Result
+    # =====================================================
+
+    print()
+    print("=" * 70)
+    print("Student Examination Result")
+    print("=" * 70)
+
+    print(f"Student Name : {student_name}")
+    print(f"Exam Score   : {exam_score}")
+    print(f"Grade        : {grade}")
+    print(f"Result       : {description}")
+
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()
