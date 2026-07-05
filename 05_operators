@@ -1,0 +1,166 @@
+operators.py
+"""
+=========================================================
+Project     : Python Fundamentals
+Module      : 05 - Operators
+Author      : Kushendar
+Repository  : python-fundamentals
+Language    : Python 3
+
+Description
+-----------
+This module introduces Python operators.
+
+Operators are special symbols used to perform operations
+on variables and values. They are fundamental building
+blocks in programming because they allow programs to
+calculate values, compare data, evaluate logical
+conditions, and manipulate variables.
+
+Python provides several categories of operators.
+
+Operator Categories
+-------------------
+1. Arithmetic Operators
+2. Assignment Operators
+3. Comparison Operators
+4. Logical Operators
+5. Identity Operators
+6. Membership Operators
+
+Learning Objectives
+-------------------
+1. Understand the purpose of operators.
+2. Learn arithmetic calculations.
+3. Compare values using comparison operators.
+4. Evaluate logical expressions.
+5. Understand identity operators.
+6. Understand membership operators.
+7. Display operator results clearly.
+
+Functions Used
+--------------
+print()     Display information.
+type()      Display object type.
+
+Expected Output
+---------------
+The program demonstrates the most commonly used Python
+operators together with their results.
+
+Coding Style
+------------
+This module follows clean code principles and PEP 8
+recommendations for readability, maintainability,
+and professional software development.
+=========================================================
+"""
+
+
+def main():
+    """Main entry point of the program."""
+
+    # =====================================================
+    # Variables
+    # =====================================================
+
+    number_a = 20
+    number_b = 10
+
+    is_python = True
+    is_learning = False
+
+    programming_languages = [
+        "Python",
+        "Java",
+        "C++"
+    ]
+
+    # =====================================================
+    # Arithmetic Operators
+    # =====================================================
+
+    addition = number_a + number_b
+    subtraction = number_a - number_b
+    multiplication = number_a * number_b
+    division = number_a / number_b
+    floor_division = number_a // number_b
+    modulus = number_a % number_b
+    exponent = number_a ** 2
+
+    # =====================================================
+    # Comparison Operators
+    # =====================================================
+
+    equal = number_a == number_b
+    not_equal = number_a != number_b
+    greater = number_a > number_b
+    less = number_a < number_b
+    greater_equal = number_a >= number_b
+    less_equal = number_a <= number_b
+
+    # =====================================================
+    # Logical Operators
+    # =====================================================
+
+    logical_and = is_python and is_learning
+    logical_or = is_python or is_learning
+    logical_not = not is_python
+
+    # =====================================================
+    # Identity Operators
+    # =====================================================
+
+    identity_is = number_a is number_b
+    identity_is_not = number_a is not number_b
+
+    # =====================================================
+    # Membership Operators
+    # =====================================================
+
+    python_exists = "Python" in programming_languages
+    go_exists = "Go" in programming_languages
+
+    # =====================================================
+    # Display Result
+    # =====================================================
+
+    print("=" * 70)
+    print("Python Operators")
+    print("=" * 70)
+
+    print("\nArithmetic Operators")
+    print(f"{number_a} + {number_b}  = {addition}")
+    print(f"{number_a} - {number_b}  = {subtraction}")
+    print(f"{number_a} * {number_b}  = {multiplication}")
+    print(f"{number_a} / {number_b}  = {division}")
+    print(f"{number_a} // {number_b} = {floor_division}")
+    print(f"{number_a} % {number_b}  = {modulus}")
+    print(f"{number_a} ** 2 = {exponent}")
+
+    print("\nComparison Operators")
+    print(f"{number_a} == {number_b} : {equal}")
+    print(f"{number_a} != {number_b} : {not_equal}")
+    print(f"{number_a} >  {number_b} : {greater}")
+    print(f"{number_a} <  {number_b} : {less}")
+    print(f"{number_a} >= {number_b} : {greater_equal}")
+    print(f"{number_a} <= {number_b} : {less_equal}")
+
+    print("\nLogical Operators")
+    print(f"True AND False : {logical_and}")
+    print(f"True OR False  : {logical_or}")
+    print(f"NOT True       : {logical_not}")
+
+    print("\nIdentity Operators")
+    print(f"number_a is number_b     : {identity_is}")
+    print(f"number_a is not number_b : {identity_is_not}")
+
+    print("\nMembership Operators")
+    print(f"'Python' in list : {python_exists}")
+    print(f"'Go' in list     : {go_exists}")
+
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()
