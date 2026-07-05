@@ -1,0 +1,71 @@
+"""
+=========================================================
+Project     : Python Fundamentals
+Module      : 02 - Variables
+Author      : Kushendar
+Repository  : python-fundamentals
+=========================================================
+
+Description
+-----------
+This module introduces Python variables.
+
+A variable is a named storage location that is used
+to store data in memory. Variables make programs easier
+to read, maintain, and modify.
+
+Learning Objectives
+-------------------
+1. Understand what a variable is.
+2. Learn how to create variables.
+3. Learn Python naming conventions.
+4. Display variable values.
+"""
+
+def main():
+    """
+    Main program.
+    """
+
+    # =====================================================
+    # String Variable
+    # =====================================================
+
+    full_name = "Kushendar"
+
+    # =====================================================
+    # Integer Variable
+    # =====================================================
+
+    age = 25
+
+    # =====================================================
+    # Float Variable
+    # =====================================================
+
+    height = 170.5
+
+    # =====================================================
+    # Boolean Variable
+    # =====================================================
+
+    is_learning_python = True
+
+    # =====================================================
+    # Display Output
+    # =====================================================
+
+    print("=" * 50)
+    print("Python Variables Example")
+    print("=" * 50)
+
+    print(f"Name      : {full_name}")
+    print(f"Age       : {age}")
+    print(f"Height    : {height} cm")
+    print(f"Learning  : {is_learning_python}")
+
+    print("=" * 50)
+
+
+if __name__ == "__main__":
+    main()
