@@ -1,0 +1,134 @@
+lists.py
+"""
+=========================================================
+Project     : Python Fundamentals
+Module      : 09 - Lists
+Author      : Kushendar
+Repository  : python-fundamentals
+Language    : Python 3
+
+Description
+-----------
+This module introduces the Python List data structure.
+
+A list is an ordered, mutable collection that can store
+multiple values in a single variable. A list can contain
+different data types, including integers, strings,
+floating-point numbers, Boolean values, and even other
+lists.
+
+Lists are one of the most frequently used data structures
+in Python because they are flexible, easy to use, and
+well suited for storing collections of related data.
+
+Learning Objectives
+-------------------
+1. Understand what a list is.
+2. Learn how to create a list.
+3. Access list elements using indexes.
+4. Add new elements to a list.
+5. Modify existing elements.
+6. Remove elements from a list.
+7. Iterate through a list using a for loop.
+8. Display list information clearly.
+
+Functions Used
+--------------
+print()     Display information.
+len()       Return the number of items.
+append()    Add an item to the end of a list.
+remove()    Remove an item by value.
+
+Expected Output
+---------------
+The program demonstrates how to create, access, update,
+add, remove, and display list elements.
+
+Coding Style
+------------
+This module follows clean code principles and PEP 8
+recommendations for readability, maintainability,
+and professional software development.
+=========================================================
+"""
+
+
+def display_header():
+    """Display the program title."""
+
+    print("=" * 70)
+    print("Python Lists")
+    print("=" * 70)
+
+
+def display_list(title, items):
+    """Display all elements in a list."""
+
+    print()
+    print(title)
+    print("-" * 70)
+
+    for index, item in enumerate(items, start=1):
+        print(f"{index}. {item}")
+
+
+def main():
+    """Main entry point of the program."""
+
+    display_header()
+
+    # =====================================================
+    # Create List
+    # =====================================================
+
+    programming_languages = [
+        "Python",
+        "Java",
+        "C++",
+        "JavaScript"
+    ]
+
+    # =====================================================
+    # Access List Element
+    # =====================================================
+
+    first_language = programming_languages[0]
+
+    # =====================================================
+    # Add New Element
+    # =====================================================
+
+    programming_languages.append("Go")
+
+    # =====================================================
+    # Modify Element
+    # =====================================================
+
+    programming_languages[2] = "C#"
+
+    # =====================================================
+    # Remove Element
+    # =====================================================
+
+    programming_languages.remove("Java")
+
+    # =====================================================
+    # Display Results
+    # =====================================================
+
+    print(f"First Language : {first_language}")
+    print(f"Total Items    : {len(programming_languages)}")
+
+    display_list(
+        "Programming Languages",
+        programming_languages
+    )
+
+    print()
+    print("=" * 70)
+    print("Program Completed Successfully")
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()
