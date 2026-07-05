@@ -1,0 +1,117 @@
+file_handling.py
+"""
+=========================================================
+Project     : Python Fundamentals
+Module      : 14 - File Handling
+Author      : Kushendar
+Repository  : python-fundamentals
+Language    : Python 3
+
+Description
+-----------
+This module introduces file handling in Python.
+
+File handling allows programs to create, read, write,
+and append data stored in files. It is one of the most
+important skills in software development because many
+applications need to save and retrieve information from
+persistent storage.
+
+Python provides the built-in open() function together
+with the 'with' statement to safely manage files.
+
+Learning Objectives
+-------------------
+1. Understand file handling.
+2. Create a text file.
+3. Write data to a file.
+4. Read data from a file.
+5. Append new data.
+6. Display file contents.
+7. Use context managers with 'with'.
+
+Functions Used
+--------------
+open()          Open a file.
+write()         Write data.
+read()          Read file contents.
+print()         Display information.
+
+Expected Output
+---------------
+The program creates a text file, writes data into it,
+appends additional information, and finally reads and
+displays the entire file contents.
+
+Coding Style
+------------
+This module follows clean code principles and PEP 8
+recommendations for readability, maintainability,
+and professional software development.
+=========================================================
+"""
+
+FILE_NAME = "data.txt"
+
+
+def display_header():
+    """Display the program title."""
+
+    print("=" * 70)
+    print("Python File Handling")
+    print("=" * 70)
+
+
+def write_file():
+    """Create a new file and write initial content."""
+
+    with open(FILE_NAME, "w", encoding="utf-8") as file:
+        file.write("Python Fundamentals\n")
+        file.write("Module : File Handling\n")
+        file.write("Author : Kushendar\n")
+
+
+def append_file():
+    """Append additional content to the file."""
+
+    with open(FILE_NAME, "a", encoding="utf-8") as file:
+        file.write("Repository : python-fundamentals\n")
+        file.write("Learning Python step by step.\n")
+
+
+def read_file():
+    """Read and return the file contents."""
+
+    with open(FILE_NAME, "r", encoding="utf-8") as file:
+        return file.read()
+
+
+def display_content(content):
+    """Display the file contents."""
+
+    print()
+    print("File Contents")
+    print("-" * 70)
+    print(content)
+
+
+def main():
+    """Main entry point of the program."""
+
+    display_header()
+
+    write_file()
+
+    append_file()
+
+    content = read_file()
+
+    display_content(content)
+
+    print("=" * 70)
+    print("Program Completed Successfully")
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()
