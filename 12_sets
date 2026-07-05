@@ -1,0 +1,167 @@
+sets.py
+"""
+=========================================================
+Project     : Python Fundamentals
+Module      : 12 - Sets
+Author      : Kushendar
+Repository  : python-fundamentals
+Language    : Python 3
+
+Description
+-----------
+This module introduces the Python Set data structure.
+
+A set is an unordered, mutable collection of unique
+elements. Unlike lists and tuples, sets do not allow
+duplicate values and do not maintain element order.
+
+Sets are useful for removing duplicate data, performing
+mathematical set operations, and checking membership
+efficiently.
+
+Python supports several set operations such as union,
+intersection, difference, and symmetric difference.
+
+Learning Objectives
+-------------------
+1. Understand what a set is.
+2. Learn how to create a set.
+3. Add new elements.
+4. Remove existing elements.
+5. Perform common set operations.
+6. Iterate through a set.
+7. Display set information clearly.
+
+Functions Used
+--------------
+print()             Display information.
+len()               Return the number of elements.
+add()               Add a new element.
+remove()            Remove an element.
+union()             Combine two sets.
+intersection()      Find common elements.
+difference()        Find different elements.
+
+Expected Output
+---------------
+The program demonstrates how to create, modify,
+iterate, and perform common mathematical operations
+using Python sets.
+
+Coding Style
+------------
+This module follows clean code principles and PEP 8
+recommendations for readability, maintainability,
+and professional software development.
+=========================================================
+"""
+
+
+def display_header():
+    """Display the program title."""
+
+    print("=" * 70)
+    print("Python Sets")
+    print("=" * 70)
+
+
+def display_set(title, data):
+    """Display all elements in a set."""
+
+    print()
+    print(title)
+    print("-" * 70)
+
+    for index, item in enumerate(sorted(data), start=1):
+        print(f"{index}. {item}")
+
+
+def main():
+    """Main entry point of the program."""
+
+    display_header()
+
+    # =====================================================
+    # Create Sets
+    # =====================================================
+
+    backend_languages = {
+        "Python",
+        "Java",
+        "Go",
+        "PHP"
+    }
+
+    cloud_languages = {
+        "Python",
+        "Go",
+        "Rust",
+        "JavaScript"
+    }
+
+    # =====================================================
+    # Add New Element
+    # =====================================================
+
+    backend_languages.add("C#")
+
+    # =====================================================
+    # Remove Element
+    # =====================================================
+
+    backend_languages.remove("PHP")
+
+    # =====================================================
+    # Set Operations
+    # =====================================================
+
+    all_languages = backend_languages.union(cloud_languages)
+
+    common_languages = (
+        backend_languages.intersection(cloud_languages)
+    )
+
+    unique_backend = (
+        backend_languages.difference(cloud_languages)
+    )
+
+    # =====================================================
+    # Display Results
+    # =====================================================
+
+    print(f"Backend Languages : {len(backend_languages)}")
+    print(f"Cloud Languages   : {len(cloud_languages)}")
+
+    display_set(
+        "Backend Languages",
+        backend_languages
+    )
+
+    display_set(
+        "Cloud Languages",
+        cloud_languages
+    )
+
+    display_set(
+        "Union",
+        all_languages
+    )
+
+    display_set(
+        "Intersection",
+        common_languages
+    )
+
+    display_set(
+        "Difference",
+        unique_backend
+    )
+
+    print()
+    print("=" * 70)
+    print("Program Completed Successfully")
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()
