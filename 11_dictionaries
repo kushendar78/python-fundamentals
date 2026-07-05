@@ -1,0 +1,138 @@
+dictionaries.py
+"""
+=========================================================
+Project     : Python Fundamentals
+Module      : 11 - Dictionaries
+Author      : Kushendar
+Repository  : python-fundamentals
+Language    : Python 3
+
+Description
+-----------
+This module introduces the Python Dictionary data
+structure.
+
+A dictionary is a mutable collection that stores data
+as key-value pairs. Each key is unique and is used to
+access its associated value efficiently.
+
+Dictionaries are widely used in Python because they
+provide fast data retrieval and are ideal for organizing
+structured information.
+
+Learning Objectives
+-------------------
+1. Understand what a dictionary is.
+2. Learn how to create a dictionary.
+3. Access values using keys.
+4. Add new key-value pairs.
+5. Update existing values.
+6. Remove dictionary items.
+7. Iterate through dictionary contents.
+8. Display dictionary information clearly.
+
+Functions Used
+--------------
+print()         Display information.
+len()           Return the number of items.
+keys()          Return dictionary keys.
+values()        Return dictionary values.
+items()         Return key-value pairs.
+pop()           Remove an item by key.
+
+Expected Output
+---------------
+The program demonstrates how to create, access, update,
+add, remove, and display dictionary data.
+
+Coding Style
+------------
+This module follows clean code principles and PEP 8
+recommendations for readability, maintainability,
+and professional software development.
+=========================================================
+"""
+
+
+def display_header():
+    """Display the program title."""
+
+    print("=" * 70)
+    print("Python Dictionaries")
+    print("=" * 70)
+
+
+def display_dictionary(title, data):
+    """Display dictionary contents."""
+
+    print()
+    print(title)
+    print("-" * 70)
+
+    for key, value in data.items():
+        print(f"{key:<15}: {value}")
+
+
+def main():
+    """Main entry point of the program."""
+
+    display_header()
+
+    # =====================================================
+    # Create Dictionary
+    # =====================================================
+
+    employee = {
+        "ID": 1001,
+        "Name": "Kushendar",
+        "Department": "Cyber Security",
+        "Country": "Indonesia",
+        "Experience": 2
+    }
+
+    # =====================================================
+    # Access Dictionary Values
+    # =====================================================
+
+    employee_name = employee["Name"]
+    employee_department = employee["Department"]
+
+    # =====================================================
+    # Add New Item
+    # =====================================================
+
+    employee["Status"] = "Learning"
+
+    # =====================================================
+    # Update Existing Item
+    # =====================================================
+
+    employee["Experience"] = 3
+
+    # =====================================================
+    # Remove Item
+    # =====================================================
+
+    employee.pop("Country")
+
+    # =====================================================
+    # Display Results
+    # =====================================================
+
+    print(f"Employee Name : {employee_name}")
+    print(f"Department    : {employee_department}")
+    print(f"Total Items   : {len(employee)}")
+
+    display_dictionary(
+        "Employee Information",
+        employee
+    )
+
+    print()
+    print("=" * 70)
+    print("Program Completed Successfully")
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()
