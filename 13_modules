@@ -1,0 +1,51 @@
+calculator.py
+"""
+=========================================================
+Project     : Python Fundamentals
+Module      : 13 - Modules
+File        : calculator.py
+Author      : Kushendar
+Repository  : python-fundamentals
+Language    : Python 3
+
+Description
+-----------
+This module provides simple mathematical functions.
+
+The purpose of this file is to demonstrate how reusable
+functions can be separated into their own module and
+imported into another Python program.
+
+Coding Style
+------------
+This module follows clean code principles and PEP 8
+recommendations.
+=========================================================
+"""
+
+
+def add(number_a, number_b):
+    """Return the sum of two numbers."""
+
+    return number_a + number_b
+
+
+def subtract(number_a, number_b):
+    """Return the subtraction of two numbers."""
+
+    return number_a - number_b
+
+
+def multiply(number_a, number_b):
+    """Return the multiplication of two numbers."""
+
+    return number_a * number_b
+
+
+def divide(number_a, number_b):
+    """Return the division of two numbers."""
+
+    if number_b == 0:
+        raise ValueError("Division by zero is not allowed.")
+
+    return number_a / number_b
