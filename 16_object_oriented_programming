@@ -1,0 +1,111 @@
+object_oriented_programming.py
+"""
+=========================================================
+Project     : Python Fundamentals
+Module      : 16 - Object-Oriented Programming
+Author      : Kushendar
+Repository  : python-fundamentals
+Language    : Python 3
+
+Description
+-----------
+This module introduces Object-Oriented Programming (OOP)
+in Python.
+
+Object-Oriented Programming is a programming paradigm
+that organizes software using classes and objects.
+It allows developers to model real-world entities,
+improve code organization, encourage code reuse,
+and simplify software maintenance.
+
+Learning Objectives
+-------------------
+1. Understand classes and objects.
+2. Create a class.
+3. Define attributes.
+4. Define methods.
+5. Instantiate objects.
+6. Call object methods.
+7. Display object information.
+
+Functions Used
+--------------
+print()         Display information.
+__init__()      Initialize object attributes.
+
+Expected Output
+---------------
+The program demonstrates how to define a class,
+create an object, initialize attributes, and call
+methods to display object information.
+
+Coding Style
+------------
+This module follows clean code principles and PEP 8
+recommendations for readability, maintainability,
+and professional software development.
+=========================================================
+"""
+
+
+class Employee:
+    """
+    Represents an employee.
+    """
+
+    def __init__(
+        self,
+        employee_id,
+        name,
+        department,
+        country
+    ):
+        """Initialize employee attributes."""
+
+        self.employee_id = employee_id
+        self.name = name
+        self.department = department
+        self.country = country
+
+    def display_information(self):
+        """Display employee information."""
+
+        print()
+        print("Employee Information")
+        print("-" * 70)
+        print(f"Employee ID : {self.employee_id}")
+        print(f"Name        : {self.name}")
+        print(f"Department  : {self.department}")
+        print(f"Country     : {self.country}")
+
+
+def display_header():
+    """Display the program title."""
+
+    print("=" * 70)
+    print("Python Object-Oriented Programming")
+    print("=" * 70)
+
+
+def main():
+    """Main entry point of the program."""
+
+    display_header()
+
+    employee = Employee(
+        employee_id=1001,
+        name="Kushendar",
+        department="Cyber Security",
+        country="Indonesia"
+    )
+
+    employee.display_information()
+
+    print()
+    print("=" * 70)
+    print("Program Completed Successfully")
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()
