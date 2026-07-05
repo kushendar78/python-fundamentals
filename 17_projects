@@ -1,0 +1,108 @@
+projects.py
+
+"""
+=========================================================
+Project     : Python Fundamentals
+Module      : 17 - Projects
+Author      : Kushendar
+Repository  : python-fundamentals
+Language    : Python 3
+
+Description
+-----------
+This module provides an overview of practical Python
+projects.
+
+After learning Python fundamentals, the next step is
+to apply programming knowledge by building small,
+real-world applications.
+
+Projects help improve problem-solving skills,
+strengthen programming logic, and provide practical
+experience with Python.
+
+Learning Objectives
+-------------------
+1. Understand project-based learning.
+2. Organize project ideas.
+3. Display project information.
+4. Build confidence through practice.
+5. Prepare for larger software projects.
+
+Functions Used
+--------------
+print()         Display information.
+enumerate()     Display numbered project list.
+
+Expected Output
+---------------
+The program displays a collection of beginner-friendly
+Python project ideas that can be implemented after
+completing the Python Fundamentals modules.
+
+Coding Style
+------------
+This module follows clean code principles and PEP 8
+recommendations for readability, maintainability,
+and professional software development.
+=========================================================
+"""
+
+
+def display_header():
+    """Display the program title."""
+
+    print("=" * 70)
+    print("Python Projects")
+    print("=" * 70)
+
+
+def display_projects(projects):
+    """Display the list of beginner Python projects."""
+
+    print()
+    print("Recommended Beginner Projects")
+    print("-" * 70)
+
+    for index, project in enumerate(projects, start=1):
+        print(f"{index:2}. {project}")
+
+
+def main():
+    """Main entry point of the program."""
+
+    display_header()
+
+    projects = [
+        "Calculator",
+        "Temperature Converter",
+        "BMI Calculator",
+        "Password Generator",
+        "Random Password Manager",
+        "To-Do List",
+        "Student Management System",
+        "Inventory Management System",
+        "Contact Book",
+        "Simple Banking System",
+        "File Organizer",
+        "CSV Reader",
+        "JSON Reader",
+        "Log File Analyzer",
+        "System Information Viewer",
+        "Network Ping Tool",
+        "Port Scanner (Educational)",
+        "Simple Web Scraper",
+        "Weather Information Viewer",
+        "Command Line Notes Application"
+    ]
+
+    display_projects(projects)
+
+    print()
+    print("=" * 70)
+    print("Program Completed Successfully")
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()
