@@ -1,0 +1,121 @@
+functions.py
+"""
+=========================================================
+Project     : Python Fundamentals
+Module      : 08 - Functions
+Author      : Kushendar
+Repository  : python-fundamentals
+Language    : Python 3
+
+Description
+-----------
+This module introduces functions in Python.
+
+A function is a reusable block of code designed to
+perform a specific task. Functions help organize
+programs into smaller, manageable, and reusable units,
+making code easier to read, maintain, test, and extend.
+
+Functions are one of the fundamental building blocks of
+Python programming and are widely used in real-world
+applications.
+
+Python supports two main categories of functions:
+
+1. Built-in Functions
+   Functions provided by Python such as print(), input(),
+   len(), type(), range(), and many others.
+
+2. User-defined Functions
+   Functions created by programmers using the "def"
+   keyword to perform custom tasks.
+
+Learning Objectives
+-------------------
+1. Understand the purpose of functions.
+2. Learn how to define functions.
+3. Learn how to call functions.
+4. Understand function parameters.
+5. Understand return values.
+6. Improve code organization and reusability.
+
+Functions Used
+--------------
+print()     Display information.
+input()     Receive user input.
+int()       Convert string to integer.
+
+Expected Output
+---------------
+The program demonstrates how to define and call
+functions, pass arguments, return values, and display
+results in a structured manner.
+
+Coding Style
+------------
+This module follows clean code principles and PEP 8
+recommendations for readability, maintainability,
+and professional software development.
+=========================================================
+"""
+
+
+def display_header():
+    """Display the program title."""
+
+    print("=" * 70)
+    print("Python Functions")
+    print("=" * 70)
+
+
+def calculate_sum(number_a, number_b):
+    """
+    Return the sum of two numbers.
+
+    Parameters
+    ----------
+    number_a : int
+        First number.
+    number_b : int
+        Second number.
+
+    Returns
+    -------
+    int
+        Sum of the two numbers.
+    """
+
+    return number_a + number_b
+
+
+def display_result(number_a, number_b, total):
+    """Display the calculation result."""
+
+    print()
+    print("Calculation Result")
+    print("-" * 70)
+    print(f"First Number  : {number_a}")
+    print(f"Second Number : {number_b}")
+    print(f"Total         : {total}")
+
+
+def main():
+    """Main entry point of the program."""
+
+    display_header()
+
+    number_a = int(input("Enter first number  : "))
+    number_b = int(input("Enter second number : "))
+
+    total = calculate_sum(number_a, number_b)
+
+    display_result(number_a, number_b, total)
+
+    print()
+    print("=" * 70)
+    print("Program Completed Successfully")
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()
