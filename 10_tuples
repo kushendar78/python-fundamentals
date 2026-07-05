@@ -1,0 +1,120 @@
+tuples.py
+"""
+=========================================================
+Project     : Python Fundamentals
+Module      : 10 - Tuples
+Author      : Kushendar
+Repository  : python-fundamentals
+Language    : Python 3
+
+Description
+-----------
+This module introduces the Python Tuple data structure.
+
+A tuple is an ordered, immutable collection that stores
+multiple values in a single variable. Unlike lists, tuple
+elements cannot be modified, added, or removed after the
+tuple has been created.
+
+Tuples are commonly used to represent fixed collections
+of related data that should remain constant throughout
+the execution of a program.
+
+Learning Objectives
+-------------------
+1. Understand what a tuple is.
+2. Learn how to create a tuple.
+3. Access tuple elements using indexes.
+4. Iterate through tuple elements.
+5. Count the number of tuple elements.
+6. Understand tuple immutability.
+7. Display tuple information clearly.
+
+Functions Used
+--------------
+print()     Display information.
+len()       Return the number of elements.
+type()      Display the object type.
+enumerate() Return both index and value.
+
+Expected Output
+---------------
+The program demonstrates how to create, access,
+iterate, and display tuple elements while emphasizing
+that tuples are immutable.
+
+Coding Style
+------------
+This module follows clean code principles and PEP 8
+recommendations for readability, maintainability,
+and professional software development.
+=========================================================
+"""
+
+
+def display_header():
+    """Display the program title."""
+
+    print("=" * 70)
+    print("Python Tuples")
+    print("=" * 70)
+
+
+def display_tuple(title, items):
+    """Display all tuple elements."""
+
+    print()
+    print(title)
+    print("-" * 70)
+
+    for index, item in enumerate(items, start=1):
+        print(f"{index}. {item}")
+
+
+def main():
+    """Main entry point of the program."""
+
+    display_header()
+
+    # =====================================================
+    # Create Tuple
+    # =====================================================
+
+    server_ports = (
+        22,
+        80,
+        443,
+        3306,
+        5432
+    )
+
+    # =====================================================
+    # Access Tuple Elements
+    # =====================================================
+
+    first_port = server_ports[0]
+    last_port = server_ports[-1]
+
+    # =====================================================
+    # Display Results
+    # =====================================================
+
+    print(f"Tuple Type     : {type(server_ports).__name__}")
+    print(f"Total Elements : {len(server_ports)}")
+    print(f"First Port     : {first_port}")
+    print(f"Last Port      : {last_port}")
+
+    display_tuple(
+        "Server Ports",
+        server_ports
+    )
+
+    print()
+    print("=" * 70)
+    print("Tuple is Immutable (Read-Only)")
+    print("No elements were modified.")
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()
