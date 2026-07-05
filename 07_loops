@@ -1,0 +1,91 @@
+loops.py
+"""
+=========================================================
+Project     : Python Fundamentals
+Module      : 07 - Loops
+Author      : Kushendar
+Repository  : python-fundamentals
+Language    : Python 3
+
+Description
+-----------
+This module introduces loops in Python.
+
+Loops are control flow statements that allow a program
+to execute a block of code repeatedly without writing
+the same code multiple times.
+
+Python provides two primary loop structures:
+
+1. for loop
+2. while loop
+
+Loops are essential for processing collections of data,
+performing repetitive tasks, automating workflows, and
+building efficient programs.
+
+Learning Objectives
+-------------------
+1. Understand why loops are used.
+2. Learn how to use the for loop.
+3. Learn how to use the while loop.
+4. Understand the range() function.
+5. Learn how loop conditions work.
+6. Display loop results clearly.
+
+Functions Used
+--------------
+print()     Display information.
+range()     Generate a sequence of numbers.
+
+Expected Output
+---------------
+The program demonstrates both the for loop and the
+while loop by printing a sequence of numbers.
+
+Coding Style
+------------
+This module follows clean code principles and PEP 8
+recommendations for readability, maintainability,
+and professional software development.
+=========================================================
+"""
+
+
+def main():
+    """Main entry point of the program."""
+
+    # =====================================================
+    # For Loop Example
+    # =====================================================
+
+    print("=" * 70)
+    print("For Loop Example")
+    print("=" * 70)
+
+    for number in range(1, 6):
+        print(f"Iteration : {number}")
+
+    # =====================================================
+    # While Loop Example
+    # =====================================================
+
+    print()
+    print("=" * 70)
+    print("While Loop Example")
+    print("=" * 70)
+
+    counter = 1
+
+    while counter <= 5:
+        print(f"Counter : {counter}")
+        counter += 1
+
+    print()
+    print("=" * 70)
+    print("Loop Completed Successfully")
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()
